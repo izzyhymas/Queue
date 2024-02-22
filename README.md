@@ -1,0 +1,2 @@
+# Queue
+Type Strict Queue
