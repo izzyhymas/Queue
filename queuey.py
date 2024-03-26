@@ -23,14 +23,14 @@ class Queuey:
         """ Removes the next item in the queue and returns it """
         if self.size == 0:
             return None        
-        self.size -= 1
         person = self.q[0]
         self.q = self.q[1:]
+        self.size -= 1
         return person
 
     def peek(self):
         """ Returns the next item in the queue, but does not remove it """
-        if self.q == []:
+        if self.size == 0:
             return None
         return self.q[0]
 
@@ -41,6 +41,7 @@ class Queuey:
     def clear(self) -> None:
         """ Removes all items from the queue """
         self.q = []
+        self.size = 0
 
 def main():
     q = Queuey(float)
